@@ -1,0 +1,92 @@
+<body>
+
+    <%- include('header') %>
+    <div class="container">
+
+        <h1>Book Store Dashboard</h1>
+
+        <div class="summary">
+
+            <div class="box">
+                <h3>Total Books</h3>
+                <p>
+                    <%= totalBooks %>
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>Total Quantity</h3>
+                <p>
+                    <%= totalQuantity %>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="btn-group">
+
+            <a href="/add-book" class="btn">
+                Add New Book
+            </a>
+
+            <a href="/books" class="btn">
+                View All Books
+            </a>
+
+        </div>
+
+        <h2 class="section-title">Recent Books</h2>
+
+        <% if(books.length> 0){ %>
+
+            <div class="book-container">
+
+                <% books.forEach(book=> { %>
+
+                    <div class="card">
+
+                        <img src="/uploads/<%= book.image %>" alt="Book Image">
+
+                        <div class="card-body">
+
+                            <h3>
+                                <%= book.title %>
+                            </h3>
+
+                            <p>
+                                <strong>Author:</strong>
+                                <%= book.author %>
+                            </p>
+
+                            <p>
+                                <strong>Category:</strong>
+                                <%= book.category %>
+                            </p>
+
+                            <p>
+                                <strong>Price:</strong>
+                                ₹<%= book.price %>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <% }) %>
+
+            </div>
+
+            <% } else { %>
+
+                <h3 class="empty-msg">
+                    No Books Available
+                </h3>
+
+                <% } %>
+
+    </div>
+
+    <script src="/js/script.js"></script>
+
+    <%- include('footer') %>
+</body>

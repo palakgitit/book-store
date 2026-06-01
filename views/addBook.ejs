@@ -1,0 +1,37 @@
+<%- include('header') %>
+
+    <div class="add-book-container">
+
+        <h1 class="page-title">
+
+            Add New Book
+
+        </h1>
+
+        <form class="book-form" action="/add-book" method="POST" enctype="multipart/form-data">
+
+            <input class="form-input" type="text" name="title" placeholder="Book Title" required>
+
+            <input class="form-input" type="text" name="author" placeholder="Author Name" required>
+
+            <input class="form-input" type="text" name="category" placeholder="Category" required>
+
+            <input class="form-input" type="number" name="price" placeholder="Price" required>
+
+            <input class="form-input" type="number" name="quantity" placeholder="Quantity" required>
+
+            <textarea class="form-textarea" name="description" placeholder="Description"></textarea>
+
+            <input class="form-file" type="file" name="image" required>
+
+            <button class="submit-btn" type="submit">
+
+                Add Book
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <%- include('footer') %>

@@ -1,0 +1,46 @@
+<%- include('header') %>
+
+    <div class="edit-container">
+
+        <h1 class="edit-title">Edit Book</h1>
+
+        <form class="edit-form" action="/update-book/<%= book._id %>" method="POST" enctype="multipart/form-data">
+
+            <label>Book Title</label>
+            <input type="text" name="title" value="<%= book.title %>" required>
+
+            <label>Author</label>
+            <input type="text" name="author" value="<%= book.author %>" required>
+
+            <label>Category</label>
+            <input type="text" name="category" value="<%= book.category %>" required>
+
+            <label>Price</label>
+            <input type="number" name="price" value="<%= book.price %>" required>
+
+            <label>Quantity</label>
+            <input type="number" name="quantity" value="<%= book.quantity %>" required>
+
+            <label>Description</label>
+            <textarea name="description"><%= book.description %></textarea>
+
+            <label>Current Image</label>
+            <br>
+            <img class="current-img" src="/uploads/<%= book.image %>">
+
+            <label>Upload New Image</label>
+            <input type="file" name="image">
+
+            <button type="submit" class="edit-btn">
+                Update Book
+            </button>
+
+        </form>
+
+        <a href="/books" class="back-link">
+            ← Back to Books
+        </a>
+
+    </div>
+
+    <%- include('footer') %>
