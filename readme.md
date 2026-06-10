@@ -7,7 +7,7 @@ A full-stack web application built using **Node.js, Express.js, MongoDB, EJS, an
 ## 🚀 Video Link
 
 
-[BOOK-STORE VIVA](https://drive.google.com/file/d/14yu2aCIBoVE9B0JMweky1IeL7Of-OJ6_/view?usp=sharing)
+[BOOK-STORE VIVA](https://drive.google.com/file/d/1pERZV1q8uPi_iNCTfJR1qmCwwZ4jzsKk/view?usp=drive_link)
 
 ---
 
